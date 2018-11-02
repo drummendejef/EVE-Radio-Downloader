@@ -423,7 +423,7 @@ namespace Download_EVE_Radio_Sessions.WPF.ViewModel
         private void WindowClosing(CancelEventArgs e)
         {
             //Check if there is a file still beeing downloaded, if so, show warning message
-            if(EVERadioSessions.Any(s => s.IsDownloading == true))
+            if(EVERadioSessions.Any(s => s.IsDownloading))
             {
                 MessageBoxResult result = MessageBox.Show("Download(s) still busy, sure you want to stop?", "Warning", MessageBoxButton.YesNo);
 
