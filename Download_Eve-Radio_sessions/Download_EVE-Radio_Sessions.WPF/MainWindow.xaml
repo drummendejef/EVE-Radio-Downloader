@@ -1,0 +1,65 @@
+﻿<Window x:Class="Download_EVE_Radio_Sessions.WPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Download_EVE_Radio_Sessions.WPF"
+        mc:Ignorable="d"
+        DataContext="{Binding EVERadioVM, Source={StaticResource Locator}}"
+        Title="MainWindow" Height="600" Width="850">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <ListView Name="everadiosessionsListView" Margin="10,10,8,10" ItemsSource="{Binding EVERadioSessions}" SelectionMode="Multiple"  >
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <WrapPanel ToolTipService.ShowDuration="20000" ToolTipService.HasDropShadow="True" >
+                        <WrapPanel.ToolTip>
+                            <ToolTip>
+                                <StackPanel Orientation="Vertical">
+                                    <Label Content="{Binding DownloadSpeed}" ContentStringFormat="Downloadspeed: {0}kb/s"></Label>
+                                    <Label Content="{Binding TimeStarted}" ContentStringFormat="Started downloading at: {0:Humm:ss}"></Label>
+                                    <Label Content="{Binding FileSize}" ContentStringFormat="Filesize: {0}MB"></Label>
+                                </StackPanel>
+                            </ToolTip>
+                        </WrapPanel.ToolTip>
+                        <Grid Margin="0,-5,0,0">
+                            <ProgressBar Minimum="0" Maximum="100" Width="100px" Value="{Binding Progress}"/>
+                            <Label HorizontalAlignment="Center" Content="{Binding Progress, FallbackValue=?}" ContentStringFormat="{}{0}%" ></Label>
+                        </Grid>
+                        <TextBlock Margin="10,0,0,0" Text="{Binding FileName}" Background="{Binding Achtergrondkleur}" />
+                    </WrapPanel>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+            <ListView.ItemContainerStyle>
+                <Style TargetType="ListViewItem">
+                    <Setter Property="IsSelected" Value="{Binding IsSelected}" />
+                </Style>
+            </ListView.ItemContainerStyle>
+        </ListView>
+
+        <Button Content="Download All" Command="{Binding DownloadAllCommand}" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Grid.Column="1" Height="30" Width="80"/>
+        <Button Content="Download Selected" CommandParameter="{Binding ElementName=everadiosessionsListView, Path=SelectedItems}" Command="{Binding DownloadSelectedCommand}" HorizontalAlignment="Left" Margin="95,10,0,0" VerticalAlignment="Top" Grid.Column="1" Height="30" Width="106"/>
+        <CheckBox Content="Use proxy" Grid.Column="1" HorizontalAlignment="Left" Margin="186,75,0,0" VerticalAlignment="Top" IsChecked="{Binding UseProxy}" Height="15" Width="72"/>
+
+        <Label Content="Feedback:" Grid.Column="1" HorizontalAlignment="Left" Margin="16,0,0,129" VerticalAlignment="Bottom" Height="26" Width="63" />
+        <ListBox Grid.Column="1" Margin="10,0,10,10" VerticalAlignment="Bottom" Height="119" ItemsSource="{Binding FeedbackList}" Background="{Binding FeedbackColor}"  />
+        <Button Content="Choose Download Folder" Grid.Column="1" HorizontalAlignment="Left" Margin="10,45,0,0" VerticalAlignment="Top" Command="{Binding ChooseDownloadFolderCommand}" Height="20" Width="138"/>
+        <Button Content="Open Downloadfolder" Grid.Column="1" Margin="153,45,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="121" Command="{Binding OpenDownloadFolderCommand}" Height="20"/>
+        <Label Content="{Binding DownloadFolder}" Grid.Column="1" HorizontalAlignment="Left" Margin="10,69,0,0" VerticalAlignment="Top" Width="157" Height="26"/>
+
+
+        <!--Todo list-->
+        <Label Content="Todo List" Grid.Column="1" HorizontalAlignment="Left" Margin="10,100,0,0" VerticalAlignment="Top" Height="26" Width="57"/>
+        <ListBox Grid.Column="1" Height="100" Margin="10,125,10,0" VerticalAlignment="Top" IsEnabled="False" >
+            <ListBoxItem>Make sure a downloading song can't be started again</ListBoxItem>
+            <ListBoxItem>Show networkspeed we are using</ListBoxItem>
+        </ListBox>
+        <Button Content="Open FileZilla" Grid.Column="1" HorizontalAlignment="Left" Margin="10,230,0,0" VerticalAlignment="Top" Width="75" Command="{Binding OpenFilleZillaCommand}" Height="20" />
+
+
+
+    </Grid>
+</Window>

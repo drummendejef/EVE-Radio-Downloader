@@ -1,0 +1,9 @@
+C:\Users\Admin\Documents\GitHub\FidlingAround\Download_Eve-Radio_sessions\Download_EVE-Radio-Sessions.ClassLibrary\bin\Release\Download_EVE-Radio-Sessions.ClassLibrary.dll
+C:\Users\Admin\Documents\GitHub\FidlingAround\Download_Eve-Radio_sessions\Download_EVE-Radio-Sessions.ClassLibrary\bin\Release\Download_EVE-Radio-Sessions.ClassLibrary.pdb
+C:\Users\Admin\Documents\GitHub\FidlingAround\Download_Eve-Radio_sessions\Download_EVE-Radio-Sessions.ClassLibrary\bin\Release\Newtonsoft.Json.dll
+C:\Users\Admin\Documents\GitHub\FidlingAround\Download_Eve-Radio_sessions\Download_EVE-Radio-Sessions.ClassLibrary\bin\Release\Newtonsoft.Json.xml
+C:\Users\Admin\Documents\GitHub\FidlingAround\Download_Eve-Radio_sessions\Download_EVE-Radio-Sessions.ClassLibrary\obj\Release\Download_EVE-Radio-Sessions.ClassLibrary.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Documents\GitHub\FidlingAround\Download_Eve-Radio_sessions\Download_EVE-Radio-Sessions.ClassLibrary\obj\Release\Download_EVE-Radio-Sessions.ClassLibrary.dll
+C:\Users\Admin\Documents\GitHub\FidlingAround\Download_Eve-Radio_sessions\Download_EVE-Radio-Sessions.ClassLibrary\obj\Release\Download_EVE-Radio-Sessions.ClassLibrary.pdb
+C:\Users\Admin\Documents\GitHub\FidlingAround\Download_Eve-Radio_sessions\Download_EVE-Radio-Sessions.ClassLibrary\obj\Release\Download_EVE-Radio-Sessions.ClassLibrary.csprojAssemblyReference.cache
+C:\Users\Admin\Documents\GitHub\FidlingAround\Download_Eve-Radio_sessions\Download_EVE-Radio-Sessions.ClassLibrary\obj\Release\Download_EVE-Radio-Sessions.ClassLibrary.csproj.CopyComplete

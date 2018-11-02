@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26430.12
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Download_Eve-Radio_sessions", "Download_Eve-Radio_sessions\Download_Eve-Radio_sessions.csproj", "{8114D4AE-5316-42CE-9234-270DA2C03B7A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Download_EVE-Radio_Sessions.WPF", "Download_EVE-Radio_Sessions.WPF\Download_EVE-Radio_Sessions.WPF.csproj", "{1D61EDD4-554D-49FF-B677-805684509118}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Download_EVE-Radio-Sessions.ClassLibrary", "Download_EVE-Radio-Sessions.ClassLibrary\Download_EVE-Radio-Sessions.ClassLibrary.csproj", "{DCE968C7-A6FC-469D-9A5D-DCFC196C62F3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8114D4AE-5316-42CE-9234-270DA2C03B7A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8114D4AE-5316-42CE-9234-270DA2C03B7A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8114D4AE-5316-42CE-9234-270DA2C03B7A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8114D4AE-5316-42CE-9234-270DA2C03B7A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1D61EDD4-554D-49FF-B677-805684509118}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1D61EDD4-554D-49FF-B677-805684509118}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1D61EDD4-554D-49FF-B677-805684509118}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1D61EDD4-554D-49FF-B677-805684509118}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DCE968C7-A6FC-469D-9A5D-DCFC196C62F3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DCE968C7-A6FC-469D-9A5D-DCFC196C62F3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DCE968C7-A6FC-469D-9A5D-DCFC196C62F3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DCE968C7-A6FC-469D-9A5D-DCFC196C62F3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
