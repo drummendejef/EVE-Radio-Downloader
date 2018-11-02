@@ -18,6 +18,9 @@ using Microsoft.WindowsAPICodePack.Shell;
 using Microsoft.WindowsAPICodePack.Shell.PropertySystem;
 using System.Diagnostics;
 using System.Collections.ObjectModel;
+using System.Windows.Controls.Primitives;
+using System.Windows;
+using MessageBox = System.Windows.MessageBox;
 
 namespace Download_EVE_Radio_Sessions.WPF.ViewModel
 {
@@ -106,8 +109,11 @@ namespace Download_EVE_Radio_Sessions.WPF.ViewModel
             get { return new RelayCommand(OpenFileZilla); }
         }
 
-
-
+        //Opvangen Window sluit event
+        public ICommand WindowClosingCommand
+        {
+            get { return new RelayCommand<CancelEventArgs>(WindowClosing); }
+        }
 
         #endregion
 
@@ -122,6 +128,7 @@ namespace Download_EVE_Radio_Sessions.WPF.ViewModel
             //Feedback invullen
             FeedbackList.Add("Hello I'm feedback. Please press 'Download All' to start");
             FeedbackColor = "White";
+
         }
 
         //Download all the sessions
@@ -132,7 +139,7 @@ namespace Download_EVE_Radio_Sessions.WPF.ViewModel
                 //Give feedback to user
                 FeedbackList.Add("We started downloading ALL THE SONGS");
                 FeedbackColor = "Green";
-                
+
 
                 //We overlopen alle EVE Radio sessies die we willen downloaden
                 foreach(EVERadioSession sessie in EVERadioSessions)
@@ -141,11 +148,13 @@ namespace Download_EVE_Radio_Sessions.WPF.ViewModel
 
                     if(!IsFullSession(localpath))//Als het een volledig bestand is moeten we het niet opnieuw downloaden
                     {
+                        sessie.IsDownloading = true;
                         sessie.Achtergrondkleur = "Orange";
                         DownloadFileAsync(sessie.FilePath, localpath);//Aanzetten om bestanden te downloaden
                     }
                     else
                     {
+                        sessie.IsDownloading = false;
                         sessie.Achtergrondkleur = "GreenYellow";
                         sessie.Progress = 100;
                     }
@@ -201,11 +210,13 @@ namespace Download_EVE_Radio_Sessions.WPF.ViewModel
 
                     if(!IsFullSession(localpath))//Als het een volledig bestand is moeten we het niet opnieuw downloaden
                     {
+                        sessie.IsDownloading = true;
                         sessie.Achtergrondkleur = "Orange";
                         DownloadFileAsync(sessie.FilePath, localpath);//Aanzetten om bestanden te downloaden
                     }
                     else
                     {
+                        sessie.IsDownloading = false;
                         sessie.Achtergrondkleur = "GreenYellow";
                         sessie.Progress = 100;
                     }
@@ -277,6 +288,9 @@ namespace Download_EVE_Radio_Sessions.WPF.ViewModel
 
             //Resetten van downloadsnelheid stopwatch
             evers.StopWatch.Reset();
+
+            //Klaar met downloaden
+            evers.IsDownloading = false;
 
             //Als we iets gevonden hebben vullen we een percentage in.
             if(evers != null)
@@ -404,6 +418,23 @@ namespace Download_EVE_Radio_Sessions.WPF.ViewModel
                 FeedbackList.Add("Filezilla niet geopend: " + ex.Message);
             }
         }
+
+        //If window is closing, check if downloads would be stopped and warn
+        private void WindowClosing(CancelEventArgs e)
+        {
+            //Check if there is a file still beeing downloaded, if so, show warning message
+            if(EVERadioSessions.Any(s => s.IsDownloading == true))
+            {
+                MessageBoxResult result = MessageBox.Show("Download(s) still busy, sure you want to stop?", "Warning", MessageBoxButton.YesNo);
+
+                if(result != MessageBoxResult.Yes)
+                {
+                    e.Cancel = true;
+                }
+            }
+        }
+
         #endregion
+
     }
 }

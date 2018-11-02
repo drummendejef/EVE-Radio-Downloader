@@ -91,13 +91,5 @@ namespace Download_EVE_Radio_Sessions.WPF.Models
             get { return _isdownloading; }
             set { _isdownloading = value; RaisePropertyChanged("IsDownloading"); }
         }
-
-
-
-
-
-
-
-
     }
 }

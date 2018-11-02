@@ -42,14 +42,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Download_EVE-Radio_Sessions.WPF.exe" size="29152">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Download_EVE-Radio_Sessions.WPF.exe" size="31712">
       <assemblyIdentity name="Download_EVE-Radio_Sessions.WPF" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>54bnQxITn6ggyAMXTUAEbau8nPN7veNK3tr3SLLzJZs=</dsig:DigestValue>
+        <dsig:DigestValue>xROzdp0oI2uAOvXEDuaHYKYh30+KuANXtarj2MYh4+w=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -61,7 +61,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>wg62aesMCOyaX1A1oduMXVH3VwsDhHHtctyaaURYfJw=</dsig:DigestValue>
+        <dsig:DigestValue>5RTThaqlZGKulhNzQCaOw9LLy329t1LrBjxv2NvRkUM=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
