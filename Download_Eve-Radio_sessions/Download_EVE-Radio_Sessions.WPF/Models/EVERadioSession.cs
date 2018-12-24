@@ -85,7 +85,7 @@ namespace Download_EVE_Radio_Sessions.WPF.Models
         /// <summary>
         /// Keep status of file. Is it still downloading? (disable download all button/make sure it can't be downloaded again when already downloading)
         /// </summary>
-        private bool _isdownloading = false;
+        private bool _isdownloading;
         public bool IsDownloading
         {
             get { return _isdownloading; }

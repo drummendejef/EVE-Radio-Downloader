@@ -63,8 +63,11 @@
         <!--Todo list-->
         <Label Content="Todo List" Grid.Column="1" HorizontalAlignment="Left" Margin="10,100,0,0" VerticalAlignment="Top" Height="26" Width="57"/>
         <ListBox Grid.Column="1" Height="100" Margin="10,125,10,0" VerticalAlignment="Top" IsEnabled="False" >
-            <ListBoxItem>Make sure a downloading song can't be started again</ListBoxItem>
             <ListBoxItem>Show networkspeed we are using</ListBoxItem>
+            <ListBoxItem>Find downloadpath for a new pc (when folder doesn't exist)</ListBoxItem>
+            <ListBoxItem>Delete bad parts of song (intro and outro)</ListBoxItem>
+            <ListBoxItem>Show amount already downloaded per song</ListBoxItem>
+            <ListBoxItem>Disable download selected button if nothing is selected</ListBoxItem>
         </ListBox>
         <Button Content="Open FileZilla" Grid.Column="1" HorizontalAlignment="Left" Margin="10,230,0,0" VerticalAlignment="Top" Width="75" Command="{Binding OpenFilleZillaCommand}" Height="20" />
     </Grid>

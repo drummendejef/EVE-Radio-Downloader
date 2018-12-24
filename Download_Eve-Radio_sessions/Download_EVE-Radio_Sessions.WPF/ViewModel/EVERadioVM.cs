@@ -144,20 +144,7 @@ namespace Download_EVE_Radio_Sessions.WPF.ViewModel
                 //We overlopen alle EVE Radio sessies die we willen downloaden
                 foreach(EVERadioSession sessie in EVERadioSessions)
                 {
-                    string localpath = _downloadfolder + sessie.FileName;
-
-                    if(!IsFullSession(localpath))//Als het een volledig bestand is moeten we het niet opnieuw downloaden
-                    {
-                        sessie.IsDownloading = true;
-                        sessie.Achtergrondkleur = "Orange";
-                        DownloadFileAsync(sessie.FilePath, localpath);//Aanzetten om bestanden te downloaden
-                    }
-                    else
-                    {
-                        sessie.IsDownloading = false;
-                        sessie.Achtergrondkleur = "GreenYellow";
-                        sessie.Progress = 100;
-                    }
+                    HandleSession(sessie);
                 }
             }
             catch(Exception ex)
@@ -168,7 +155,11 @@ namespace Download_EVE_Radio_Sessions.WPF.ViewModel
             }
         }
 
-
+        /// <summary>
+        /// Controles of het een volledige radiosessie is
+        /// </summary>
+        /// <param name="localpath"></param>
+        /// <returns></returns>
         private bool IsFullSession(string localpath)
         {
             try
@@ -206,20 +197,7 @@ namespace Download_EVE_Radio_Sessions.WPF.ViewModel
                 //Sessies ophalen die geselecteerd zijn
                 foreach(EVERadioSession sessie in EVERadioSessions.Where(item => item.IsSelected))
                 {
-                    string localpath = _downloadfolder + sessie.FileName;
-
-                    if(!IsFullSession(localpath))//Als het een volledig bestand is moeten we het niet opnieuw downloaden
-                    {
-                        sessie.IsDownloading = true;
-                        sessie.Achtergrondkleur = "Orange";
-                        DownloadFileAsync(sessie.FilePath, localpath);//Aanzetten om bestanden te downloaden
-                    }
-                    else
-                    {
-                        sessie.IsDownloading = false;
-                        sessie.Achtergrondkleur = "GreenYellow";
-                        sessie.Progress = 100;
-                    }
+                    HandleSession(sessie);
                 }
             }
             catch(Exception ex)
@@ -347,9 +325,8 @@ namespace Download_EVE_Radio_Sessions.WPF.ViewModel
 
                         //Starten met downloadsnelheidsberekening
                         Stopwatch sw = new Stopwatch();
-                        //sw.Start();
 
-                        EVERadioSessions.Add(new EVERadioSession() { FilePath = downloadUrl, FileName = bestandsnaam, StopWatch = sw });
+                        EVERadioSessions.Add(new EVERadioSession() { FilePath = downloadUrl, FileName = bestandsnaam, StopWatch = sw, IsDownloading = false });
                     }
                 }
             }
@@ -358,6 +335,36 @@ namespace Download_EVE_Radio_Sessions.WPF.ViewModel
                 Console.WriteLine(ex.Message);
                 FeedbackColor = "Red";
                 FeedbackList.Add("Failed getting all sessions. Maybe this helps: " + ex.Message);
+            }
+        }
+
+        /// <summary>
+        /// Checks if a session is downloading
+        /// Starts downloading session if not already downloading
+        /// </summary>
+        /// <param name="sessie"></param>
+        private void HandleSession(EVERadioSession sessie)
+        {
+            string localpath = _downloadfolder + sessie.FileName;
+
+            if(sessie.IsDownloading)//Als het bestand aan het downloaden is, gaan we het niet onderbreken
+            {
+                FeedbackList.Add("Song " + sessie.FileName + " is already downloading.");
+            }
+            else
+            {
+                if(!IsFullSession(localpath))//Als het een volledig bestand is moeten we het niet opnieuw downloaden
+                {
+                    sessie.IsDownloading = true;
+                    sessie.Achtergrondkleur = "Orange";
+                    DownloadFileAsync(sessie.FilePath, localpath);//Aanzetten om bestanden te downloaden
+                }
+                else
+                {
+                    sessie.IsDownloading = false;
+                    sessie.Achtergrondkleur = "GreenYellow";
+                    sessie.Progress = 100;
+                }
             }
         }
 
