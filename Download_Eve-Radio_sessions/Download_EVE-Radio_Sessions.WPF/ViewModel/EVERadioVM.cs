@@ -74,6 +74,12 @@ namespace Download_EVE_Radio_Sessions.WPF.ViewModel
             set { _downloadingspeeds = value; RaisePropertyChanged("DownloadingSpeeds"); }
         }
 
+        private bool isselectedlistempty = false;
+        public bool IsSelectedListEmpty
+        {
+            get { return isselectedlistempty; }
+            set { isselectedlistempty = value; RaisePropertyChanged("IsSelectedListEmpty"); }
+        }
 
 
         #endregion
