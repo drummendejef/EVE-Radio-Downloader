@@ -59,7 +59,7 @@ namespace Download_EVE_Radio_Sessions.WPF.ViewModel
         }
 
         //Location of where the downloads should go to
-        private string _downloadfolder = "C:\\Users\\Admin\\Music\\";
+        private string _downloadfolder = Environment.GetFolderPath(Environment.SpecialFolder.MyMusic);
         public string DownloadFolder
         {
             get { return _downloadfolder; }
