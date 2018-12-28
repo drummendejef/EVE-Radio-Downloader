@@ -74,7 +74,6 @@
         <Label Content="Todo List" Grid.Column="1" HorizontalAlignment="Left" Margin="10,100,0,0" VerticalAlignment="Top" Height="26" Width="57"/>
         <ListBox Grid.Column="1" Height="100" Margin="10,125,10,0" VerticalAlignment="Top" IsEnabled="False" >
             <ListBoxItem>Show networkspeed we are using</ListBoxItem>
-            <ListBoxItem>Find downloadpath for a new pc (when folder doesn't exist)</ListBoxItem>
             <ListBoxItem>Delete bad parts of song (intro and outro)</ListBoxItem>
             <ListBoxItem>Show amount already downloaded per song</ListBoxItem>
         </ListBox>
