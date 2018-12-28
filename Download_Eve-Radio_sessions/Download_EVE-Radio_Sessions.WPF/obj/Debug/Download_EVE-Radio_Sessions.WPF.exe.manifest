@@ -49,19 +49,19 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>+ileLc/7pFbfE6TNN17t10xIcfCJIz21BtfA6QGD30s=</dsig:DigestValue>
+        <dsig:DigestValue>mFSzLMrZbynNn/5PP7rFHoTMACoPY6KGmzDAJdMXN4w=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Download_EVE-Radio-Sessions.ClassLibrary.dll" size="6144">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Download_EVE-Radio-Sessions.ClassLibrary.dll" size="10240">
       <assemblyIdentity name="Download_EVE-Radio-Sessions.ClassLibrary" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>xGcvuiXCpfgX/6kpwGJvPgFszo0aX8X8AUeLi2xr5SQ=</dsig:DigestValue>
+        <dsig:DigestValue>NWPoTxq6fATStx97+8F9igGz/exgUSEQxzu4VTIGDIs=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -138,6 +138,18 @@
     </dependentAssembly>
   </dependency>
   <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="netstandard.dll" size="98616">
+      <assemblyIdentity name="netstandard" version="2.0.0.0" publicKeyToken="CC7B13FFCD2DDD51" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>i+SiJw+LK+pA8z95hp/cyjTge7dk5juB3tSdkNK3IN0=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
     <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Newtonsoft.Json.dll" size="652288">
       <assemblyIdentity name="Newtonsoft.Json" version="10.0.0.0" publicKeyToken="30AD4FE6B2A6AEED" language="neutral" processorArchitecture="msil" />
       <hash>
@@ -146,6 +158,30 @@
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
         <dsig:DigestValue>bMDLzVxHCcahyX9VgcNH2T5YbnzA1kv/tNMsbnU0dqQ=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="PacketDotNet.dll" size="226816">
+      <assemblyIdentity name="PacketDotNet" version="0.16.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>UCjwaGG1BRZ90AGdaHXv5Y+jHMP8u0AtonucICUj8Jw=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="SharpPcap.dll" size="70144">
+      <assemblyIdentity name="SharpPcap" version="4.5.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>HxkNli6Kb1mnjWutrBROTBHqmnQq2+1ZyPQrygLEIqY=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -161,13 +197,13 @@
       </hash>
     </dependentAssembly>
   </dependency>
-  <file name="Download_EVE-Radio_Sessions.WPF.exe.config" size="326">
+  <file name="Download_EVE-Radio_Sessions.WPF.exe.config" size="323">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>inmRbN9ULtDBDfVwm0PpaSipr2yULDFTuz6ot2b5T3I=</dsig:DigestValue>
+      <dsig:DigestValue>CuApjEVtPUxxl3f5wy0Fbdha6eFLTj2vvsR2LjC3o8Q=</dsig:DigestValue>
     </hash>
   </file>
 </asmv1:assembly>
