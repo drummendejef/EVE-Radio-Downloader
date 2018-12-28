@@ -4,17 +4,17 @@
   <description asmv2:publisher="Download_EVE-Radio_Sessions.WPF" asmv2:product="Download_EVE-Radio_Sessions.WPF" xmlns="urn:schemas-microsoft-com:asm.v1" />
   <deployment install="true" mapFileExtensions="true" />
   <compatibleFrameworks xmlns="urn:schemas-microsoft-com:clickonce.v2">
-    <framework targetVersion="4.6.1" profile="Full" supportedRuntime="4.0.30319" />
+    <framework targetVersion="4.5.2" profile="Full" supportedRuntime="4.0.30319" />
   </compatibleFrameworks>
   <dependency>
-    <dependentAssembly dependencyType="install" codebase="Download_EVE-Radio_Sessions.WPF.exe.manifest" size="11900">
+    <dependentAssembly dependencyType="install" codebase="Download_EVE-Radio_Sessions.WPF.exe.manifest" size="9945">
       <assemblyIdentity name="Download_EVE-Radio_Sessions.WPF.exe" version="1.0.0.4" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>NKPM4mwbcJVGILmtr5L0/Wkz9QaRvx6iJFGZflsw7Eo=</dsig:DigestValue>
+        <dsig:DigestValue>/0JpA+Tir4vJ7Lp8pXW5/ghYZszjZLRQm12qP64QIVo=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
