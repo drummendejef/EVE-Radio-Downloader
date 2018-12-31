@@ -80,3 +80,5 @@ C:\Users\Admin\Documents\GitHub\EVE-Radio-Downloader\Download_Eve-Radio_sessions
 C:\Users\Admin\Documents\GitHub\EVE-Radio-Downloader\Download_Eve-Radio_sessions\Download_EVE-Radio_Sessions.WPF\obj\Release\Download_EVE-Radio_Sessions.WPF.csproj.CopyComplete
 C:\Users\Admin\Documents\GitHub\EVE-Radio-Downloader\Download_Eve-Radio_sessions\Download_EVE-Radio_Sessions.WPF\obj\Release\Download_EVE-Radio_Sessions.WPF.exe
 C:\Users\Admin\Documents\GitHub\EVE-Radio-Downloader\Download_Eve-Radio_sessions\Download_EVE-Radio_Sessions.WPF\obj\Release\Download_EVE-Radio_Sessions.WPF.pdb
+C:\Users\Admin\Documents\GitHub\EVE-Radio-Downloader\Download_Eve-Radio_sessions\Download_EVE-Radio_Sessions.WPF\bin\Release\SharpPcap.dll
+C:\Users\Admin\Documents\GitHub\EVE-Radio-Downloader\Download_Eve-Radio_sessions\Download_EVE-Radio_Sessions.WPF\bin\Release\PacketDotNet.dll
