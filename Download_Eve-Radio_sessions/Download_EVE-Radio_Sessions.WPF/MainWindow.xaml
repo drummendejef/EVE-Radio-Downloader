@@ -68,14 +68,15 @@
         <Button Content="Choose Download Folder" Grid.Column="1" HorizontalAlignment="Left" Margin="10,45,0,0" VerticalAlignment="Top" Command="{Binding ChooseDownloadFolderCommand}" Height="20" Width="138"/>
         <Button Content="Open Downloadfolder" Grid.Column="1" Margin="153,45,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="121" Command="{Binding OpenDownloadFolderCommand}" Height="20"/>
         <Label Content="{Binding DownloadFolder}" Grid.Column="1" HorizontalAlignment="Left" Margin="10,69,0,0" VerticalAlignment="Top" Width="157" Height="26"/>
-
+        <Label Content="{Binding DownloadSpeed}" Grid.Column="1" HorizontalAlignment="Left" Margin="10,255,0,0" VerticalAlignment="Top" Height="26"/>
 
         <!--Todo list-->
         <Label Content="Todo List" Grid.Column="1" HorizontalAlignment="Left" Margin="10,100,0,0" VerticalAlignment="Top" Height="26" Width="57"/>
         <ListBox Grid.Column="1" Height="100" Margin="10,125,10,0" VerticalAlignment="Top" IsEnabled="False" >
-            <ListBoxItem>Show networkspeed we are using</ListBoxItem>
+            <ListBoxItem>Show total networkspeed we are using</ListBoxItem>
             <ListBoxItem>Delete bad parts of song (intro and outro)</ListBoxItem>
             <ListBoxItem>Show amount already downloaded per song</ListBoxItem>
+            <ListBoxItem>Improve downloadspeed shown per item. Does it now only update when an item gets updated?</ListBoxItem>
         </ListBox>
         <Button Content="Open FileZilla" Grid.Column="1" HorizontalAlignment="Left" Margin="10,230,0,0" VerticalAlignment="Top" Width="75" Command="{Binding OpenFilleZillaCommand}" Height="20" />
     </Grid>
