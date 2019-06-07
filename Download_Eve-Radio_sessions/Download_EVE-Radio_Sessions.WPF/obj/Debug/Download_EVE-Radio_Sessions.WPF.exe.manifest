@@ -15,14 +15,14 @@
       <requestedPrivileges xmlns="urn:schemas-microsoft-com:asm.v3">
         <!--
           UAC Manifest Options
-          If you want to change the Windows User Account Control level replace the 
+          If you want to change the Windows User Account Control level replace the
           requestedExecutionLevel node with one of the following.
 
         <requestedExecutionLevel  level="asInvoker" uiAccess="false" />
         <requestedExecutionLevel  level="requireAdministrator" uiAccess="false" />
         <requestedExecutionLevel  level="highestAvailable" uiAccess="false" />
 
-         If you want to utilize File and Registry Virtualization for backward 
+         If you want to utilize File and Registry Virtualization for backward
          compatibility then delete the requestedExecutionLevel node.
     -->
         <requestedExecutionLevel level="asInvoker" uiAccess="false" />
@@ -42,14 +42,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Download_EVE-Radio_Sessions.WPF.exe" size="31200">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Download_EVE-Radio_Sessions.WPF.exe" size="32224">
       <assemblyIdentity name="Download_EVE-Radio_Sessions.WPF" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>Pfy9Llz5NEXwSYEadFfKTflbZlVLDfZlxkm77dBLkqU=</dsig:DigestValue>
+        <dsig:DigestValue>1K+JGF+op6p5HQDCDDGIZDbweLnriK38ZWqFlqq+FVA=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -61,7 +61,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>4d0UF69mQDph5sMGNpb6rgrdtqY4pg1wnTPc6dTNdeY=</dsig:DigestValue>
+        <dsig:DigestValue>41xjW9IQz/YN8KxVk1DLYx2r8erdA9GOGYbj72CQ3dM=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
