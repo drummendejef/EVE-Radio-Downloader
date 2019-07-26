@@ -61,13 +61,13 @@
                 </Style>
             </Button.Style>
         </Button>
-        <CheckBox Content="Use proxy" Grid.Column="1" HorizontalAlignment="Left" Margin="186,75,0,0" VerticalAlignment="Top" IsChecked="{Binding UseProxy}" Height="15" Width="72"/>
+        <CheckBox Content="Use proxy" Grid.Column="1" HorizontalAlignment="Left" Margin="206,15,0,0" VerticalAlignment="Top" IsChecked="{Binding UseProxy}" Height="15" Width="72"/>
 
         <Label Content="Feedback:" Grid.Column="1" HorizontalAlignment="Left" Margin="16,0,0,129" VerticalAlignment="Bottom" Height="26" Width="63" />
         <ListBox Grid.Column="1" Margin="10,0,10,10" VerticalAlignment="Bottom" Height="119" ItemsSource="{Binding FeedbackList}" Background="{Binding FeedbackColor}"  />
         <Button Content="Choose Download Folder" Grid.Column="1" HorizontalAlignment="Left" Margin="10,45,0,0" VerticalAlignment="Top" Command="{Binding ChooseDownloadFolderCommand}" Height="20" Width="138"/>
         <Button Content="Open Downloadfolder" Grid.Column="1" Margin="153,45,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="121" Command="{Binding OpenDownloadFolderCommand}" Height="20"/>
-        <Label Content="{Binding DownloadFolder}" Grid.Column="1" HorizontalAlignment="Left" Margin="10,69,0,0" VerticalAlignment="Top" Width="157" Height="26"/>
+        <Label Content="{Binding DownloadFolder}" Grid.Column="1" Margin="10,69,10,0" VerticalAlignment="Top" Height="26"/>
         <Label Content="{Binding DownloadSpeed}" Grid.Column="1" HorizontalAlignment="Left" Margin="10,255,0,0" VerticalAlignment="Top" Height="26"/>
 
         <!--Todo list-->

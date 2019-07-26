@@ -14,7 +14,6 @@ C:\Users\Admin\Documents\GitHub\EVE-Radio-Downloader\Download_Eve-Radio_sessions
 C:\Users\JorenVandamme\Documents\GitHub\EVE-Radio-Downloader\Download_Eve-Radio_sessions\Download_Eve-Radio_sessions\bin\Debug\Download_Eve-Radio_sessions.exe.config
 C:\Users\JorenVandamme\Documents\GitHub\EVE-Radio-Downloader\Download_Eve-Radio_sessions\Download_Eve-Radio_sessions\bin\Debug\Download_Eve-Radio_sessions.exe
 C:\Users\JorenVandamme\Documents\GitHub\EVE-Radio-Downloader\Download_Eve-Radio_sessions\Download_Eve-Radio_sessions\bin\Debug\Download_Eve-Radio_sessions.pdb
-C:\Users\JorenVandamme\Documents\GitHub\EVE-Radio-Downloader\Download_Eve-Radio_sessions\Download_Eve-Radio_sessions\obj\Debug\Download_Eve-Radio_sessions.csprojAssemblyReference.cache
 C:\Users\JorenVandamme\Documents\GitHub\EVE-Radio-Downloader\Download_Eve-Radio_sessions\Download_Eve-Radio_sessions\obj\Debug\Download_Eve-Radio_sessions.csproj.CoreCompileInputs.cache
 C:\Users\JorenVandamme\Documents\GitHub\EVE-Radio-Downloader\Download_Eve-Radio_sessions\Download_Eve-Radio_sessions\obj\Debug\Download_Eve-Radio_sessions.exe
 C:\Users\JorenVandamme\Documents\GitHub\EVE-Radio-Downloader\Download_Eve-Radio_sessions\Download_Eve-Radio_sessions\obj\Debug\Download_Eve-Radio_sessions.pdb

@@ -18,3 +18,13 @@ C:\Users\Admin\Documents\GitHub\EVE-Radio-Downloader\Download_Eve-Radio_sessions
 C:\Users\Admin\Documents\GitHub\EVE-Radio-Downloader\Download_Eve-Radio_sessions\Download_EVE-Radio-Sessions.ClassLibrary\obj\Release\Download_EVE-Radio-Sessions.ClassLibrary.pdb
 C:\Users\Admin\Documents\GitHub\EVE-Radio-Downloader\Download_Eve-Radio_sessions\Download_EVE-Radio-Sessions.ClassLibrary\bin\Release\PacketDotNet.dll
 C:\Users\Admin\Documents\GitHub\EVE-Radio-Downloader\Download_Eve-Radio_sessions\Download_EVE-Radio-Sessions.ClassLibrary\bin\Release\SharpPcap.dll
+C:\Users\JorenVandamme\Documents\GitHub\EVE-Radio-Downloader\Download_Eve-Radio_sessions\Download_EVE-Radio-Sessions.ClassLibrary\bin\Release\Download_EVE-Radio-Sessions.ClassLibrary.dll
+C:\Users\JorenVandamme\Documents\GitHub\EVE-Radio-Downloader\Download_Eve-Radio_sessions\Download_EVE-Radio-Sessions.ClassLibrary\bin\Release\Download_EVE-Radio-Sessions.ClassLibrary.pdb
+C:\Users\JorenVandamme\Documents\GitHub\EVE-Radio-Downloader\Download_Eve-Radio_sessions\Download_EVE-Radio-Sessions.ClassLibrary\bin\Release\Newtonsoft.Json.dll
+C:\Users\JorenVandamme\Documents\GitHub\EVE-Radio-Downloader\Download_Eve-Radio_sessions\Download_EVE-Radio-Sessions.ClassLibrary\bin\Release\PacketDotNet.dll
+C:\Users\JorenVandamme\Documents\GitHub\EVE-Radio-Downloader\Download_Eve-Radio_sessions\Download_EVE-Radio-Sessions.ClassLibrary\bin\Release\SharpPcap.dll
+C:\Users\JorenVandamme\Documents\GitHub\EVE-Radio-Downloader\Download_Eve-Radio_sessions\Download_EVE-Radio-Sessions.ClassLibrary\bin\Release\Newtonsoft.Json.xml
+C:\Users\JorenVandamme\Documents\GitHub\EVE-Radio-Downloader\Download_Eve-Radio_sessions\Download_EVE-Radio-Sessions.ClassLibrary\obj\Release\Download_EVE-Radio-Sessions.ClassLibrary.csproj.CoreCompileInputs.cache
+C:\Users\JorenVandamme\Documents\GitHub\EVE-Radio-Downloader\Download_Eve-Radio_sessions\Download_EVE-Radio-Sessions.ClassLibrary\obj\Release\Download_EVE-Radio-Sessions.ClassLibrary.csproj.CopyComplete
+C:\Users\JorenVandamme\Documents\GitHub\EVE-Radio-Downloader\Download_Eve-Radio_sessions\Download_EVE-Radio-Sessions.ClassLibrary\obj\Release\Download_EVE-Radio-Sessions.ClassLibrary.dll
+C:\Users\JorenVandamme\Documents\GitHub\EVE-Radio-Downloader\Download_Eve-Radio_sessions\Download_EVE-Radio-Sessions.ClassLibrary\obj\Release\Download_EVE-Radio-Sessions.ClassLibrary.pdb
