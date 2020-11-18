@@ -388,6 +388,8 @@ namespace Download_EVE_Radio_Sessions.WPF.ViewModel
                     if(result == DialogResult.OK && !string.IsNullOrWhiteSpace(fbd.SelectedPath))
                     {
                         //Pad opslaan
+                        if (fbd.SelectedPath.Last() != '\\')
+                            fbd.SelectedPath += @"\\";//2 backslashen toegevoegd. Niet 1
                         DownloadFolder = fbd.SelectedPath;
 
                         Console.WriteLine("Downloadpad veranderd naar: " + fbd.SelectedPath);
