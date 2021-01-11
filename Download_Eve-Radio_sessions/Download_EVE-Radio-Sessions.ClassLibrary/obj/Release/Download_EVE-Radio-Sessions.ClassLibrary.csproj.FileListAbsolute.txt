@@ -28,3 +28,14 @@ C:\Users\JorenVandamme\Documents\GitHub\EVE-Radio-Downloader\Download_Eve-Radio_
 C:\Users\JorenVandamme\Documents\GitHub\EVE-Radio-Downloader\Download_Eve-Radio_sessions\Download_EVE-Radio-Sessions.ClassLibrary\obj\Release\Download_EVE-Radio-Sessions.ClassLibrary.csproj.CopyComplete
 C:\Users\JorenVandamme\Documents\GitHub\EVE-Radio-Downloader\Download_Eve-Radio_sessions\Download_EVE-Radio-Sessions.ClassLibrary\obj\Release\Download_EVE-Radio-Sessions.ClassLibrary.dll
 C:\Users\JorenVandamme\Documents\GitHub\EVE-Radio-Downloader\Download_Eve-Radio_sessions\Download_EVE-Radio-Sessions.ClassLibrary\obj\Release\Download_EVE-Radio-Sessions.ClassLibrary.pdb
+C:\Users\joren\Documents\GitHub\EVE-Radio-Downloader\Download_Eve-Radio_sessions\Download_EVE-Radio-Sessions.ClassLibrary\bin\Release\Download_EVE-Radio-Sessions.ClassLibrary.dll
+C:\Users\joren\Documents\GitHub\EVE-Radio-Downloader\Download_Eve-Radio_sessions\Download_EVE-Radio-Sessions.ClassLibrary\bin\Release\Download_EVE-Radio-Sessions.ClassLibrary.pdb
+C:\Users\joren\Documents\GitHub\EVE-Radio-Downloader\Download_Eve-Radio_sessions\Download_EVE-Radio-Sessions.ClassLibrary\bin\Release\Newtonsoft.Json.dll
+C:\Users\joren\Documents\GitHub\EVE-Radio-Downloader\Download_Eve-Radio_sessions\Download_EVE-Radio-Sessions.ClassLibrary\bin\Release\PacketDotNet.dll
+C:\Users\joren\Documents\GitHub\EVE-Radio-Downloader\Download_Eve-Radio_sessions\Download_EVE-Radio-Sessions.ClassLibrary\bin\Release\SharpPcap.dll
+C:\Users\joren\Documents\GitHub\EVE-Radio-Downloader\Download_Eve-Radio_sessions\Download_EVE-Radio-Sessions.ClassLibrary\bin\Release\Newtonsoft.Json.xml
+C:\Users\joren\Documents\GitHub\EVE-Radio-Downloader\Download_Eve-Radio_sessions\Download_EVE-Radio-Sessions.ClassLibrary\obj\Release\Download_EVE-Radio-Sessions.ClassLibrary.csprojAssemblyReference.cache
+C:\Users\joren\Documents\GitHub\EVE-Radio-Downloader\Download_Eve-Radio_sessions\Download_EVE-Radio-Sessions.ClassLibrary\obj\Release\Download_EVE-Radio-Sessions.ClassLibrary.csproj.CoreCompileInputs.cache
+C:\Users\joren\Documents\GitHub\EVE-Radio-Downloader\Download_Eve-Radio_sessions\Download_EVE-Radio-Sessions.ClassLibrary\obj\Release\Download_EVE-Radio-Sessions.ClassLibrary.csproj.CopyComplete
+C:\Users\joren\Documents\GitHub\EVE-Radio-Downloader\Download_Eve-Radio_sessions\Download_EVE-Radio-Sessions.ClassLibrary\obj\Release\Download_EVE-Radio-Sessions.ClassLibrary.dll
+C:\Users\joren\Documents\GitHub\EVE-Radio-Downloader\Download_Eve-Radio_sessions\Download_EVE-Radio-Sessions.ClassLibrary\obj\Release\Download_EVE-Radio-Sessions.ClassLibrary.pdb

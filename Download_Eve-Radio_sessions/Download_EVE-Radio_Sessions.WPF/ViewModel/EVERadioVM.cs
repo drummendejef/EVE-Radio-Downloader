@@ -170,7 +170,10 @@ namespace Download_EVE_Radio_Sessions.WPF.ViewModel
                 using (ShellObject shell = ShellObject.FromParsingName(localpath))
                 {
                     IShellProperty prop = shell.Properties.System.Media.Duration;
-                    ticks = (ulong)prop.ValueAsObject;
+                    if (prop.ValueAsObject is null)
+                        return false;//Is nog niet compleet
+                    else
+                        ticks = (ulong)prop.ValueAsObject;
                 }
 
                 //Kijken of het een volledige sessie is
@@ -212,6 +215,8 @@ namespace Download_EVE_Radio_Sessions.WPF.ViewModel
         //Start downloaden van een bestand
         private async Task DownloadFileAsync(string url, string naam)
         {
+            ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls | SecurityProtocolType.Tls11 | SecurityProtocolType.Tls12 | SecurityProtocolType.Ssl3;
+
             try
             {
                 using (WebClient wc = new WebClient())
