@@ -7,7 +7,7 @@
     <framework targetVersion="4.5.2" profile="Full" supportedRuntime="4.0.30319" />
   </compatibleFrameworks>
   <dependency>
-    <dependentAssembly dependencyType="install" codebase="Download_EVE-Radio_Sessions.WPF.exe.manifest" size="11694">
+    <dependentAssembly dependencyType="install" codebase="Application Files\Download_EVE-Radio_Sessions.WPF_1_0_0_5\Download_EVE-Radio_Sessions.WPF.exe.manifest" size="11694">
       <assemblyIdentity name="Download_EVE-Radio_Sessions.WPF.exe" version="1.0.0.5" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
       <hash>
         <dsig:Transforms>
