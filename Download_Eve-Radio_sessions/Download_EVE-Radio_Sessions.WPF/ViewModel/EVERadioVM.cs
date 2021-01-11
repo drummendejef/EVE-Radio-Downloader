@@ -2,15 +2,11 @@
 using GalaSoft.MvvmLight.Command;
 using System;
 using System.Collections.Generic;
-using System.IO;
 using System.Linq;
 using System.Net;
-using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
 using System.ComponentModel;
-using System.Windows.Media;
-using System.Runtime.Remoting.Contexts;
 using Download_EVE_Radio_Sessions.ClassLibrary;
 using Download_EVE_Radio_Sessions.ClassLibrary.Models;
 using System.Windows.Forms;
@@ -18,7 +14,6 @@ using Microsoft.WindowsAPICodePack.Shell;
 using Microsoft.WindowsAPICodePack.Shell.PropertySystem;
 using System.Diagnostics;
 using System.Collections.ObjectModel;
-using System.Windows.Controls.Primitives;
 using System.Windows;
 using MessageBox = System.Windows.MessageBox;
 
@@ -148,12 +143,12 @@ namespace Download_EVE_Radio_Sessions.WPF.ViewModel
 
 
                 //We overlopen alle EVE Radio sessies die we willen downloaden
-                foreach(EVERadioSession sessie in EVERadioSessions)
+                foreach (EVERadioSession sessie in EVERadioSessions)
                 {
                     HandleSession(sessie);
                 }
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 Console.WriteLine("Foutboodschap: " + ex.Message);
                 FeedbackColor = "Red";
@@ -172,14 +167,14 @@ namespace Download_EVE_Radio_Sessions.WPF.ViewModel
             {
                 //Lengte van setje opvragen.
                 ulong ticks = 0;
-                using(ShellObject shell = ShellObject.FromParsingName(localpath))
+                using (ShellObject shell = ShellObject.FromParsingName(localpath))
                 {
                     IShellProperty prop = shell.Properties.System.Media.Duration;
                     ticks = (ulong)prop.ValueAsObject;
                 }
 
                 //Kijken of het een volledige sessie is
-                if(ticks > 108000000000)//3 uur lengte
+                if (ticks > 108000000000)//3 uur lengte
                 {
                     return true;//Het is een volledige sessie.
                 }
@@ -187,7 +182,7 @@ namespace Download_EVE_Radio_Sessions.WPF.ViewModel
                 return false;//De sessie is nog niet compleet
 
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 Console.WriteLine("GetLengthUsingShellObject failed: " + ex.Message);
 
@@ -201,12 +196,12 @@ namespace Download_EVE_Radio_Sessions.WPF.ViewModel
             try
             {
                 //Sessies ophalen die geselecteerd zijn
-                foreach(EVERadioSession sessie in EVERadioSessions.Where(item => item.IsSelected))
+                foreach (EVERadioSession sessie in EVERadioSessions.Where(item => item.IsSelected))
                 {
                     HandleSession(sessie);
                 }
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 Console.WriteLine("Foutboodschap: " + ex.Message);
                 FeedbackColor = "Red";
@@ -219,7 +214,7 @@ namespace Download_EVE_Radio_Sessions.WPF.ViewModel
         {
             try
             {
-                using(WebClient wc = new WebClient())
+                using (WebClient wc = new WebClient())
                 {
                     wc.DownloadProgressChanged += Client_DownLoadProcessChanged;//Om tussentijdse feedback te kunnen geven.
                     wc.DownloadFileCompleted += Client_DownloadProcessComplete;//Om feedback te kunnen geven bij voltooing
@@ -227,7 +222,7 @@ namespace Download_EVE_Radio_Sessions.WPF.ViewModel
                     //Make instance off class library
                     DownloadEVERadioSessions downloadEVERadioSessionsClassLib = new DownloadEVERadioSessions();
 
-                    if(UseProxy)//Use a proxy if the user wants to
+                    if (UseProxy)//Use a proxy if the user wants to
                     {
                         GetProxyModel proxyinfo = downloadEVERadioSessionsClassLib.GetRandomProxy();//Get a random proxy
 
@@ -244,11 +239,11 @@ namespace Download_EVE_Radio_Sessions.WPF.ViewModel
                     await wc.DownloadFileTaskAsync(new Uri(url), naam);
                 }
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 Console.WriteLine(ex.Message);
 
-                if(ex.Message == "Unable to connect to the remote server")
+                if (ex.Message == "Unable to connect to the remote server")
                     FeedbackList.Add("Error, try again with Proxy enabled");
                 else
                 {
@@ -277,7 +272,7 @@ namespace Download_EVE_Radio_Sessions.WPF.ViewModel
             evers.IsDownloading = false;
 
             //Als we iets gevonden hebben vullen we een percentage in.
-            if(evers != null)
+            if (evers != null)
             {
                 evers.Progress = 100;
                 evers.Achtergrondkleur = "GreenYellow";
@@ -301,7 +296,7 @@ namespace Download_EVE_Radio_Sessions.WPF.ViewModel
 
 
             //Als we iets gevonden hebben vullen we een percentage in.
-            if(evers != null)
+            if (evers != null)
                 evers.Progress = e.ProgressPercentage;
         }
 
@@ -310,17 +305,17 @@ namespace Download_EVE_Radio_Sessions.WPF.ViewModel
         {
             try
             {
-                using(WebClient client = new WebClient())
+                using (WebClient client = new WebClient())
                 {
                     //We downloaden de EVE-Radio pagina
-                    string htmlCode = client.DownloadString("http://eve-radio.com/radio/rewind");
+                    string htmlCode = client.DownloadString("https://gamingnow.net/gn_rewind/rewind/");
 
                     //We splitsen de herbeluister divs op basis van hun ID
-                    string[] stringSeperators = new string[] { "<div id='erRW' style='float: left;'>" };
+                    string[] stringSeperators = new string[] { "<div class='parentPresent' style='display:none;'>" };
                     string[] rewinds = htmlCode.Split(stringSeperators, StringSplitOptions.None).Skip(1).ToArray();//Het eerste dat we eruit halen is rommel.
 
                     //Nu gaan we voor elk van de gevonden rewinds de starturl opzoeken
-                    foreach(string rewind in rewinds)
+                    foreach (string rewind in rewinds)
                     {
                         //We vinden de startpositie van de tekst die we willen, de eindpositie, en halen daar de lengte uit.
                         int startPos = rewind.IndexOf("Listen from: <a href='#' onclick=\"javascript:doCmd({rewind:'") + "Listen from: <a href='#' onclick=\"javascript:doCmd({rewind:'".Length;
@@ -336,7 +331,7 @@ namespace Download_EVE_Radio_Sessions.WPF.ViewModel
                     }
                 }
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 Console.WriteLine(ex.Message);
                 FeedbackColor = "Red";
@@ -353,13 +348,13 @@ namespace Download_EVE_Radio_Sessions.WPF.ViewModel
         {
             string localpath = _downloadfolder + sessie.FileName;
 
-            if(sessie.IsDownloading)//Als het bestand aan het downloaden is, gaan we het niet onderbreken
+            if (sessie.IsDownloading)//Als het bestand aan het downloaden is, gaan we het niet onderbreken
             {
                 FeedbackList.Add("Song " + sessie.FileName + " is already downloading.");
             }
             else
             {
-                if(!IsFullSession(localpath))//Als het een volledig bestand is moeten we het niet opnieuw downloaden
+                if (!IsFullSession(localpath))//Als het een volledig bestand is moeten we het niet opnieuw downloaden
                 {
                     sessie.IsDownloading = true;
                     sessie.Achtergrondkleur = "Orange";
@@ -379,13 +374,13 @@ namespace Download_EVE_Radio_Sessions.WPF.ViewModel
         {
             try
             {
-                using(FolderBrowserDialog fbd = new FolderBrowserDialog())
+                using (FolderBrowserDialog fbd = new FolderBrowserDialog())
                 {
                     //Venster openen
                     DialogResult result = fbd.ShowDialog();
 
                     //Nakijken of dat venster succesvol is geopend en pad is gekozen
-                    if(result == DialogResult.OK && !string.IsNullOrWhiteSpace(fbd.SelectedPath))
+                    if (result == DialogResult.OK && !string.IsNullOrWhiteSpace(fbd.SelectedPath))
                     {
                         //Pad opslaan
                         if (fbd.SelectedPath.Last() != '\\')
@@ -398,7 +393,7 @@ namespace Download_EVE_Radio_Sessions.WPF.ViewModel
                     }
                 }
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 FeedbackColor = "Red";
                 FeedbackList.Add("Failed to open folder: " + ex.Message);
@@ -427,7 +422,7 @@ namespace Download_EVE_Radio_Sessions.WPF.ViewModel
                 pcss.Start();
                 //Process.Start("Filezilla.exe");
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 FeedbackColor = "Red";
                 FeedbackList.Add("Filezilla niet geopend: " + ex.Message);
@@ -438,11 +433,11 @@ namespace Download_EVE_Radio_Sessions.WPF.ViewModel
         private void WindowClosing(CancelEventArgs e)
         {
             //Check if there is a file still beeing downloaded, if so, show warning message
-            if(EVERadioSessions.Any(s => s.IsDownloading))
+            if (EVERadioSessions.Any(s => s.IsDownloading))
             {
                 MessageBoxResult result = MessageBox.Show("Download(s) still busy, sure you want to stop?", "Warning", MessageBoxButton.YesNo);
 
-                if(result != MessageBoxResult.Yes)
+                if (result != MessageBoxResult.Yes)
                 {
                     e.Cancel = true;
                 }
@@ -450,6 +445,5 @@ namespace Download_EVE_Radio_Sessions.WPF.ViewModel
         }
 
         #endregion
-
     }
 }
